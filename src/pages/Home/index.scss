@@ -1,5 +1,24 @@
 .container-site{
    
+    .topoPage{
+        display: flex;
+
+        gap: 5rem;
+
+    }
+
+    .logofrei{
+        display: flex;
+
+        gap: 1rem;
+    }
+
+    .logofrei>h1{
+        font-size: 18px;
+        width: 30px;
+        
+    }
+
     .logofrei>img{
         width: 100px;
     }

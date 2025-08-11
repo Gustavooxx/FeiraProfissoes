@@ -1,6 +1,6 @@
 import './index.scss'
 
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function Site() {
     return (
@@ -11,6 +11,8 @@ export default function Site() {
 
                 <div className="logofrei">
                     <img src="/assets/images/logofrei.jpeg"  />
+
+                    <h1>Instituto Nossa Senhora De Fátima</h1>
                 </div>
 
 
@@ -18,9 +20,8 @@ export default function Site() {
                 </div>
 
                 <div className="areaRegis">
-                    <Link></Link>
-                    <button>Login</button>
-                    <button>Admin</button>
+                   <Link>Login</Link>
+                    <Link>Admin</Link>
                     
                 </div>
 

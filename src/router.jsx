@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 import Login from './pages/Login/index.jsx'
+import Site from './pages/Home/index.jsx'
 
 export default function Navegacao() {
     return (
