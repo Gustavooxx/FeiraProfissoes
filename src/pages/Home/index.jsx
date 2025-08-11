@@ -21,11 +21,10 @@ export default function Site() {
 
                  <div className="areaRegistro">
 
-                        <Link >Login</Link>
-                        <Link id='admin'>Administrador</Link>
+                        <Link to='/Login' >Login</Link>
+                        <Link id='admin'>Área Admin</Link>
                         
                  </div>
-
 
             </div>
 
@@ -37,7 +36,7 @@ export default function Site() {
 
                     <h3>5 Feira De <br />Profissões </h3>
 
-                    <Link>Cadastre-se Agora</Link>
+                    <Link to='/Login'>Cadastre-se Agora</Link>
 
                     <div className='projetos'>
 
@@ -47,18 +46,27 @@ export default function Site() {
                                 <img src="/assets/images/imagemFrei.png" alt="" />
                             </div>
 
-                            <div className='texto'>
+                            <div className='freiXavier'>
+                                <div className='img-localIntituto'>
+                                    <img src="/assets/images/localFrei.png" width='400px' height='300px'/>
 
-                            <p>participe de nossos projetos aqui esta alguns do nossos projetos na feira passada</p>
+                                </div>
+                                <div className=' titulos'>
 
+                                  
+
+                                </div>
+                                
+                                <p></p>
                             </div>
+
+                            
                             
                         </div>
 
                     </div>
 
                 </div>
-
 
             </div>
 
