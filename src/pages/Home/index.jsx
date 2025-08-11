@@ -21,36 +21,20 @@ export default function Site() {
 
                 <div className="areaRegistro">
 
-<<<<<<< HEAD
+
                     <Link id='publico' >Login</Link>
                     <Link id='admin'>Administrador</Link>
 
                 </div>
-=======
-                        <Link to='/Login' >Login</Link>
-                        <Link id='admin'>Área Admin</Link>
-                        
+ 
                  </div>
->>>>>>> 8ee8b1631170700eb8c9d2896ea1dd242842e4bc
-
-            </div>
-
-            <div className='descricoes'>
-
-                <div className='texto'>
 
                     <h2>ESFORÇO QUE TRANSFORMA E O ORGULHO PERMANECE</h2>
 
                     <h3>5 Feira De Profissões </h3>
 
                     <Link to='/Login'>Cadastre-se Agora</Link>
-
-
-                    <div className='projetos'>
-
-<<<<<<< HEAD
-=======
-                        <div className='center'>
+                <div/>
 
                             <div className='images'>
                                 <img src="/assets/images/imagemFrei.png" alt="" />
@@ -60,27 +44,10 @@ export default function Site() {
                                 <div className='img-localIntituto'>
                                     <img src="/assets/images/localFrei.png" width='400px' height='300px'/>
 
-                                </div>
                                 <div className=' titulos'>
-
-                                  
-
-                                </div>
-                                
-                                <p></p>
                             </div>
-
-                            
-                            
-                        </div>
->>>>>>> 8ee8b1631170700eb8c9d2896ea1dd242842e4bc
-
-                    </div>
-
-                </div>
-
             </div>
-
+            
             <div className="imgsAlunos">
                 <img src="/public/assets/images/alunosfrei/alunos1.jpeg" />
             </div>
@@ -98,7 +65,7 @@ export default function Site() {
             </div>
 
         </div>
-
+        </div>
 
 
     )
