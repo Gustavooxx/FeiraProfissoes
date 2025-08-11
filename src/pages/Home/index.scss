@@ -1,6 +1,9 @@
+body{
+    height: 200rem;
+    background: linear-gradient(to right, #13217a, #4c5dcd);
+}
 .container-site{
-   
-    background-color: #13217a;
+
     color: #ffffff;
 
     .topoPage{
@@ -12,19 +15,19 @@
 
     .logofrei{
         display: flex;
-
         gap: 1rem;
     }
 
     .logofrei>h1{
         font-size: 15px;
         width: 25px;
-        color: #ffffff;
+        color: #f5c66d;
         padding-top: 0.2rem;
         
     }
 
     .logofrei>img{
+        box-shadow: 0 0 150px #fefdfc;
         height: 90px;
         width: 80px;
     }
@@ -33,10 +36,9 @@
         display: flex;
         height: 3rem;
         
-        gap: 5rem;
+        gap: 2rem;
         margin-left: auto;
-
-        
+        transition: transform 0.3s ease; 
     
     a{
         text-decoration: none;
@@ -54,7 +56,9 @@
         
 
         &:hover {
-            background-color: dodgerblue;
+            background-color: #f5c66d;
+            transform: scale(1.15); /* aumenta 5% ao passar o mouse */
+            transition: transform 0.3s ease; 
         }
 
         &:active{
@@ -67,7 +71,7 @@
     .descricoes{
         display: flex;
         flex-direction: column;
-    
+
     .texto{
         text-align: center;
     }
@@ -106,26 +110,37 @@
         flex-direction: column;
         border: #ffffff;
 
-        .center{
-            display: flex;
-            padding: 5rem;
-            margin-top: 2rem;
-            background-color: #ffffff;
-            border-radius: 10px;
-        }
-
-        .images>img{
-            width: 130px;
-            height: 130px;
-            position: relative;
-            right: 2rem;
-            }
 
         .texto{
             color: #13217a;
         }
      }
 
+     
+
 }
 
+.imgsAlunos{
+    padding-top: 8rem;
+
+    .imgsAlunos>img{
+        
+    }
+}
+
+.apresentacao{
+    padding-top: 15rem;
+
+    .titulo{
+        padding-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+    .texto{
+        text-align: justify;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-size: 1.5rem;
+    }
+}
 }

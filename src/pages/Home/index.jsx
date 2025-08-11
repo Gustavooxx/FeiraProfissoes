@@ -1,6 +1,6 @@
 import './index.scss'
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Site() {
     return (
@@ -10,7 +10,7 @@ export default function Site() {
             <div className="topoPage">
 
                 <div className="logofrei">
-                    <img src="/assets/images/logofrei.jpeg"  />
+                    <img src="/assets/images/logofrei.jpeg" />
 
                     <h1>Instituto Nossa Senhora De Fátima</h1>
                 </div>
@@ -19,12 +19,12 @@ export default function Site() {
                 <div className="tituloPrincipal">
                 </div>
 
-                 <div className="areaRegistro">
+                <div className="areaRegistro">
 
-                        <Link >Login</Link>
-                        <Link id='admin'>Administrador</Link>
-                        
-                 </div>
+                    <Link id='publico' >Login</Link>
+                    <Link id='admin'>Administrador</Link>
+
+                </div>
 
 
             </div>
@@ -33,27 +33,15 @@ export default function Site() {
 
                 <div className='texto'>
 
-                    <h2>O FUTURO ESTÁ AQUI</h2>
+                    <h2>ESFORÇO QUE TRANSFORMA E O ORGULHO PERMANECE</h2>
 
-                    <h3>5 Feira De <br />Profissões </h3>
+                    <h3>5 Feira De Profissões </h3>
 
                     <Link>Cadastre-se Agora</Link>
 
+
                     <div className='projetos'>
 
-                        <div className='center'>
-
-                            <div className='images'>
-                                <img src="/assets/images/imagemFrei.png" alt="" />
-                            </div>
-
-                            <div className='texto'>
-
-                            <p>participe de nossos projetos aqui esta alguns do nossos projetos na feira passada</p>
-
-                            </div>
-                            
-                        </div>
 
                     </div>
 
@@ -62,6 +50,25 @@ export default function Site() {
 
             </div>
 
+            <div className="imgsAlunos">
+                <img src="/public/assets/images/alunosfrei/alunos1.jpeg" />
+            </div>
+
+
+            <div className="apresentacao">
+
+                <div className="titulo">
+                    <h1>Quem somos nós?</h1>
+                </div>
+
+                <div className="texto">
+                    <p>Fundado por Frei Ambrogio (conhecido como Frei Xavier) entre as décadas de 1960 e 1970, o instituto nasceu como uma resposta às necessidades da comunidade de Veleiros, na zona sul de São Paulo. Integrado à Paróquia de Nossa Senhora de Fátima, começou com uma creche em 1971 e, em 1979, inaugurou a Escola Profissional Nossa Senhora de Fátima, com foco na formação técnica e profissional de jovens e adolescentes carentes da região .</p>
+                </div>
+            </div>
+
         </div>
+
+
+
     )
 }
