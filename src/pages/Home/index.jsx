@@ -54,17 +54,7 @@ export default function Site() {
 
                     </div>
 
-                <div className='freiXavier'>
-                        <div className='img-localIntituto'>
-                             <img src="/assets/images/localFrei.png" width='400px' height='300px' />
-
-                        </div>
                 </div>
-                    
-
-                </div>
-
-               
 
             </div>
 

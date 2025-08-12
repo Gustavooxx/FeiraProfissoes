@@ -106,63 +106,33 @@ body{
      }
 
      
-     
-     
     }
     .projetos{
-       display: flex;
-       align-items: center;
-       flex-direction: column;
-       border: #ffffff;
-       background-color: #fefdfc;
-
-       .center{
         display: flex;
-        padding: 5rem;
-        margin-top: 2rem;
-        background-color: #c42828;
-        border-radius: 10px;
-    }
-
-    .images>img{
-        width: 130px;
-        height: 130px;
-        position: relative;
-        right: 2rem;
+        align-items: center;
+        flex-direction: column;
+        
+        .center{
+            display: flex;
+            padding: 5rem;
+            margin-top: 2rem;
+            background-color: #ba3232;
+            border-radius: 10px;
         }
 
-    .texto{
-        color: #13217a;
-    }
+        .images>img{
+            width: 130px;
+            height: 130px;
+            position: relative;
+            right: 2rem;
+            }
 
-       .texto{
-           color: #13217a;
-       }
-       
-       .images-projeto{
+        .texto{
+            color: #13217a;
+        }
+     }
 
-       }
-       
-      
-       .image-informatica>img{
-           width: 330px;
-           height: 250px;
-       }
 
-       .texto-informatica>p{
-           background-color: #fac666;
-           width: 200px;
-           margin-left: 50%;
-       }
-    }
-
-.imgsAlunos{
-    padding-top: 8rem;
-
-    .imgsAlunos>img{
-        
-    }
-}
 
 .apresentacao{
     padding-top: 15rem;
