@@ -56,9 +56,10 @@ body{
         
 
         &:hover {
-            background-color: #f5c66d;
+            background-color: #ffbc40;
             transform: scale(1.15); /* aumenta 5% ao passar o mouse */
             transition: transform 0.3s ease; 
+            box-shadow: #f5c66d 0px 1px 0px, #f5c66d 0px 8px 24px, #f5c66d 0px 16px 48px;
         }
 
         &:active{
@@ -79,13 +80,13 @@ body{
 
     .texto>h2{
         color: #f5c66d;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .texto>h3{
         padding-top: 2rem;
         padding-bottom: 4rem;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .texto>h4{
@@ -99,10 +100,13 @@ body{
         border: 1px solid #f5c66d;
         border-radius: 10px;
         padding: 1rem;
-        background-color: #fac666;
+        background-color: #ffb121;
 
         &:hover{
-            background-color: #ffb327;
+            transform: scale(1.15);
+            transition: transform 0.3s ease; 
+            background-color: #ffd17ac0;
+            border: 1px solid #ffd17ac0;
         }
 
         &:active{
@@ -116,50 +120,36 @@ body{
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding-top: 2rem;
+        padding-top: 10rem;
         
         .center{
             display: flex;
-            padding: 5rem;
+            align-items: center;
+            width: 70rem;
+            padding: 2rem;
             margin-top: 2rem;
-            background-color: #ba3232;
-            border-radius: 10px;
-            gap: 10rem;
+            border: 3px solid #f5c66d;
+            border-radius: 20px;
+        
         }
 
-        .images>img{
-            width: 130px;
-            height: 130px;
-            position: relative;
-            right: 2rem;
-            }
-        
         .texto-imagem{
-            width: 420px;
+            display: flex;
+            padding-left: 2rem;       
+            gap: 3rem;     
         }
 
         .texto-imagem>img{
             width: 420px;
-            height: 320px;
+            height: 380px;
             color: #13217a;
+        }
+
+        .texto-imagem>p{
+            text-align: justify;
         }
      }
 
 
 
-.apresentacao{
-    padding-top: 15rem;
-
-    .titulo{
-        padding-bottom: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    }
-    .texto{
-        text-align: justify;
-        padding-left: 4rem;
-        padding-right: 4rem;
-        font-size: 1.5rem;
-    }
-}
 }
