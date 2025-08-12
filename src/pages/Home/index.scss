@@ -71,6 +71,7 @@ body{
     .descricoes{
         display: flex;
         flex-direction: column;
+        padding-top: 5rem;
 
     .texto{
         text-align: center;
@@ -87,6 +88,10 @@ body{
         font-size: 4rem;
     }
 
+    .texto>h4{
+        padding-top: 2rem;
+        font-size: 2rem;
+    }
 
      a{
         text-decoration: none;
@@ -111,6 +116,7 @@ body{
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding-top: 2rem;
         
         .center{
             display: flex;
@@ -118,6 +124,7 @@ body{
             margin-top: 2rem;
             background-color: #ba3232;
             border-radius: 10px;
+            gap: 10rem;
         }
 
         .images>img{
@@ -126,8 +133,14 @@ body{
             position: relative;
             right: 2rem;
             }
+        
+        .texto-imagem{
+            width: 420px;
+        }
 
-        .texto{
+        .texto-imagem>img{
+            width: 420px;
+            height: 320px;
             color: #13217a;
         }
      }

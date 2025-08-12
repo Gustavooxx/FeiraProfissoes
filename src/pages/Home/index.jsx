@@ -3,6 +3,11 @@ import './index.scss'
 import { Link } from 'react-router-dom'
 
 export default function Site() {
+
+     function clicou() {
+        alert('Clicou')
+    }
+
     return (
 
         <div className='container-site'>
@@ -19,7 +24,7 @@ export default function Site() {
                 <div className="areaRegistro">
 
 
-                    <Link id='publico' >Login</Link>
+                    <Link id='publico' onClick={clicou}>Login</Link>
                     <Link id='admin'>Administrador</Link>
 
                 </div>
@@ -30,8 +35,8 @@ export default function Site() {
 
                 <div className='texto'>
 
-                    <h2>ESFORÇO QUE TRANSFORMA E O ORGULHO PERMANECE</h2>
-
+                    <h2>ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE</h2>
+                    <h4>Seu Futuro Está Aqui</h4>
                     <h3>5 Feira De Profissões </h3>
 
                     <Link to='/Login'>Cadastre-se Agora</Link>
@@ -44,11 +49,14 @@ export default function Site() {
 
                 <div className='center'>
 
+                    
                     <div className='images'>
-                        <img src="/assets/images/imagemFrei.png" alt="" />
+                        <img src="/assets/images/imagemFrei.png"  />
                     </div>
 
-                    <div className='texto'>
+                    <div className='texto-imagem'>
+
+                        <img src="/assets/images/localFrei.png"  />
 
                         <p>participe de nossos projetos aqui esta alguns do nossos projetos na feira passada</p>
 
