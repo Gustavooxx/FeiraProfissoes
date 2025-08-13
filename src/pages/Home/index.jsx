@@ -25,7 +25,7 @@ export default function Site() {
 
 
                     <Link id='publico' onClick={clicou} to='/Login'>Login</Link>
-                    <Link id='admin'>Areá Admin</Link>
+                    <Link id='admin'>Area Admin</Link>
 
                 </div>
 
