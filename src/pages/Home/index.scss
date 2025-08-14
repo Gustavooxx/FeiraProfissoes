@@ -29,7 +29,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 @mixin glass-effect {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(116, 181, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
@@ -49,13 +49,13 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     width: 100%;
 }
 
-// Hero Section
+
+// Seção Herói
 .hero-section {
     height: 100vh;
     position: relative;
     @include flex-center;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('/assets/images/localFrei2.jpeg') center/cover;
+   
     
     .hero-overlay {
         position: absolute;
@@ -77,9 +77,9 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             margin-bottom: 2rem;
             
             img {
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
+                width: 130px;
+                height: 150px;
+                border-radius: 10px;
                 box-shadow: 0 0 30px rgba(245, 198, 109, 0.5);
                 animation: pulse 2s infinite;
             }
@@ -88,7 +88,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         .hero-title {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
             background: linear-gradient(45deg, $primary-color, #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -97,27 +97,27 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         
         .hero-subtitle {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease 0.2s both;
         }
         
         .hero-description {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            padding-bottom: 2rem;
             opacity: 0.8;
             animation: fadeInUp 1s ease 0.4s both;
         }
         
         .hero-highlight {
-            margin-bottom: 2rem;
+            padding-bottom : 2rem;
             
             .highlight-text {
                 font-size: 2rem;
                 font-weight: bold;
                 color: $primary-color;
                 padding: 10px 20px;
-                background: rgba(245, 198, 109, 0.2);
+                background: #f5c66d33;
                 border-radius: 25px;
                 animation: fadeInUp 1s ease 0.6s both;
             }
@@ -158,38 +158,25 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
     }
     
-    .scroll-indicator {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: bounce 2s infinite;
-        
-        .scroll-arrow {
-            width: 30px;
-            height: 30px;
-            border-right: 2px solid $primary-color;
-            border-bottom: 2px solid $primary-color;
-            transform: rotate(45deg);
-        }
-    }
+
 }
 
-// Container utility
+
+// Utilitário de contêiner
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-// Section Headers
+// Cabeçalhos de seção
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     
     .section-title {
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
         color: $primary-color;
     }
     
@@ -199,16 +186,18 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     }
 }
 
-// About Section
+// Sobre a seção
 .about-section {
     padding: 100px 0;
-    background: rgba(255, 255, 255, 0.05);
+    background: #ffffff0d;
     
     .about-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
         align-items: center;
+        padding-bottom: 1rem;
+
         
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
@@ -220,19 +209,20 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 height: 400px;
                 object-fit: cover;
                 border-radius: 15px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 10px 30px #0000004d;
             }
         }
         
         .about-text {
+            text-align: justify;
             h3 {
                 font-size: 2rem;
-                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
                 color: $primary-color;
             }
             
             p {
-                margin-bottom: 1.5rem;
+                padding-bottom: 1.5rem;
                 line-height: 1.8;
                 opacity: 0.9;
             }
@@ -241,6 +231,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 display: flex;
                 gap: 2rem;
                 margin-top: 2rem;
+                padding-bottom: 1rem;
                 
                 .stat-item {
                     text-align: center;
@@ -262,7 +253,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     }
 }
 
-// Features SectionThe home page has been successfully updated with a more attractive design. Now, I will enhance the styling in the corresponding SCSS file to complement the new structure.
+ // Seção de Recursos A página inicial foi atualizada com sucesso com um design mais atraente. Agora, aprimorarei o estilo no arquivo SCSS correspondente para complementar a nova estrutura.
 
 
 body {
@@ -281,7 +272,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('/assets/images/hero-background.jpg') no-repeat center center/cover;
+
 
     .hero-overlay {
         position: absolute;
@@ -442,6 +433,12 @@ body {
     padding: 4rem 0;
     background-color: #f5f5f5;
 
+
+   .container{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+   }
+
     .section-header {
         text-align: center;
         margin-bottom: 2rem;
@@ -470,14 +467,20 @@ body {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
 
-            .feature-icon {
+            .feature-icon{
                 font-size: 3rem;
                 margin-bottom: 1rem;
+            }
+
+            .feature-icon>img {
+                border-radius: 30px;
+                height: 80px;
             }
 
             h3 {
                 font-size: 1.5rem;
                 margin: 0.5rem 0;
+                color: #666;
             }
 
             p {
@@ -488,50 +491,3 @@ body {
     }
 }
 
-.cta-section {
-    padding: 4rem 0;
-    background-color: #4c5dcd;
-    color: #fff;
-    text-align: center;
-
-    .cta-content {
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-buttons {
-            .btn {
-                padding: 0.5rem 1rem;
-                border-radius: 5px;
-                text-decoration: none;
-                color: #fff;
-                transition: background-color 0.3s ease;
-
-                &.btn-cta-primary {
-                    background-color: #f5c66d;
-                }
-
-                &.btn-cta-secondary {
-                    background-color: #ffbc40;
-                }
-
-                &:hover {
-                    opacity: 0.8;
-                }
-            }
-        }
-    }
-}
-
-.footer {
-    padding: 1rem 0;
-    background-color: #1b2b96;
-    color: #fff;
-    text-align: center;
-}
