@@ -23,9 +23,8 @@ export default function Site() {
 
                 <div className="areaRegistro">
 
-
                     <Link id='publico' onClick={clicou} to='/Login'>Login</Link>
-                    <Link id='admin'>Area Admin</Link>
+                    <Link id='admin' to='/Admin'>Area Admin</Link>
 
                 </div>
 
