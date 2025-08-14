@@ -44,20 +44,20 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 // Container
-.container-site {
+.container-principal {
     min-height: 100vh;
     width: 100%;
 }
 
 
-// Seção Herói
-.hero-section {
+// Seção Hero
+.secao-hero {
     height: 100vh;
     position: relative;
     @include flex-center;
    
     
-    .hero-overlay {
+    .sobreposicao-hero {
         position: absolute;
         top: 0;
         left: 0;
@@ -66,14 +66,14 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         background: linear-gradient(135deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
     }
     
-    .hero-content {
+    .conteudo-hero {
         position: relative;
         z-index: 2;
         text-align: center;
         max-width: 800px;
         padding: 0 20px;
         
-        .hero-logo {
+        .logo-hero {
             margin-bottom: 2rem;
             
             img {
@@ -85,7 +85,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             }
         }
         
-        .hero-title {
+        .titulo-hero {
             font-size: 3.5rem;
             font-weight: 700;
             padding-bottom: 1rem;
@@ -95,24 +95,24 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             animation: fadeInUp 1s ease;
         }
         
-        .hero-subtitle {
+        .subtitulo-hero {
             font-size: 1.5rem;
             padding-bottom: 1rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease 0.2s both;
         }
         
-        .hero-description {
+        .descricao-hero {
             font-size: 1.2rem;
             padding-bottom: 2rem;
             opacity: 0.8;
             animation: fadeInUp 1s ease 0.4s both;
         }
         
-        .hero-highlight {
+        .destaque-hero {
             padding-bottom : 2rem;
             
-            .highlight-text {
+            .texto-destaque {
                 font-size: 2rem;
                 font-weight: bold;
                 color: $primary-color;
@@ -123,14 +123,14 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             }
         }
         
-        .hero-buttons {
+        .botoes-hero {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.8s both;
             
-            .btn {
+            .botao {
                 padding: 15px 30px;
                 font-size: 1.1rem;
                 border: none;
@@ -139,12 +139,12 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 font-weight: 600;
                 @include button-hover;
                 
-                &.btn-primary {
+                &.botao-primario {
                     background: $primary-color;
                     color: $text-dark;
                 }
                 
-                &.btn-secondary {
+                &.botao-secundario {
                     background: transparent;
                     color: $text-light;
                     border: 2px solid $primary-color;
@@ -170,28 +170,28 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 // Cabeçalhos de seção
-.section-header {
+.cabecalho-secao {
     text-align: center;
     padding-bottom: 4rem;
     
-    .section-title {
+    .titulo-secao {
         font-size: 2.5rem;
         padding-bottom: 1rem;
         color: $primary-color;
     }
     
-    .section-subtitle {
+    .subtitulo-secao {
         font-size: 1.2rem;
         opacity: 0.8;
     }
 }
 
-// Sobre a seção
-.about-section {
+// Seção Sobre
+.secao-sobre {
     padding: 100px 0;
     background: #ffffff0d;
     
-    .about-content {
+    .conteudo-sobre {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 4rem;
@@ -203,7 +203,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             grid-template-columns: 1fr;
         }
         
-        .about-image {
+        .imagem-sobre {
             img {
                 width: 100%;
                 height: 400px;
@@ -213,7 +213,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             }
         }
         
-        .about-text {
+        .texto-sobre {
             text-align: justify;
             h3 {
                 font-size: 2rem;
@@ -227,23 +227,23 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 opacity: 0.9;
             }
             
-            .stats {
+            .estatisticas {
                 display: flex;
                 gap: 2rem;
                 margin-top: 2rem;
                 padding-bottom: 1rem;
                 
-                .stat-item {
+                .item-estatistica {
                     text-align: center;
                     
-                    .stat-number {
+                    .numero-estatistica {
                         display: block;
                         font-size: 2rem;
                         font-weight: bold;
                         color: $primary-color;
                     }
                     
-                    .stat-label {
+                    .rotulo-estatistica {
                         font-size: 0.9rem;
                         opacity: 0.8;
                     }
@@ -260,11 +260,11 @@ body {
     background: linear-gradient(to right, #1b2b96, #4c5dcd);
 }
 
-.container-site {
+.container-principal {
     color: #ffffff;
 }
 
-.hero-section {
+.secao-hero {
     position: relative;
     height: 100vh;
     display: flex;
@@ -274,7 +274,7 @@ body {
     text-align: center;
 
 
-    .hero-overlay {
+    .sobreposicao-hero {
         position: absolute;
         top: 0;
         left: 0;
@@ -283,53 +283,53 @@ body {
         background: rgba(0, 0, 0, 0.5);
     }
 
-    .hero-content {
+    .conteudo-hero {
         position: relative;
         z-index: 1;
 
-        .hero-logo {
+        .logo-hero {
             margin-bottom: 1rem;
         }
 
-        .hero-title {
+        .titulo-hero {
             font-size: 3rem;
             color: #f5c66d;
             margin: 0;
         }
 
-        .hero-subtitle {
+        .subtitulo-hero {
             font-size: 2rem;
             margin: 0.5rem 0;
         }
 
-        .hero-description {
+        .descricao-hero {
             font-size: 1.5rem;
             margin: 1rem 0;
         }
 
-        .hero-highlight {
+        .destaque-hero {
             font-size: 2rem;
             font-weight: bold;
             color: #ffbc40;
             margin: 1rem 0;
         }
 
-        .hero-buttons {
+        .botoes-hero {
             display: flex;
             gap: 1rem;
 
-            .btn {
+            .botao {
                 padding: 0.5rem 1rem;
                 border-radius: 5px;
                 text-decoration: none;
                 color: #fff;
                 transition: background-color 0.3s ease;
 
-                &.btn-primary {
+                &.botao-primario {
                     background-color: #f5c66d;
                 }
 
-                &.btn-secondary {
+                &.botao-secundario {
                     background-color: #4c5dcd;
                 }
 
@@ -358,32 +358,32 @@ body {
     }
 }
 
-.about-section {
+.secao-sobre {
     padding: 4rem 0;
     background-color: #ffffff;
     color: #000;
 
-    .section-header {
+    .cabecalho-secao {
         text-align: center;
         margin-bottom: 2rem;
 
-        .section-title {
+        .titulo-secao {
             font-size: 2.5rem;
             margin: 0;
         }
 
-        .section-subtitle {
+        .subtitulo-secao {
             font-size: 1.5rem;
             color: #666;
         }
     }
 
-    .about-content {
+    .conteudo-sobre {
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .about-image {
+        .imagem-sobre {
             margin-right: 2rem;
 
             img {
@@ -393,7 +393,7 @@ body {
             }
         }
 
-        .about-text {
+        .texto-sobre {
             max-width: 600px;
 
             h3 {
@@ -406,20 +406,20 @@ body {
                 line-height: 1.6;
             }
 
-            .stats {
+            .estatisticas {
                 display: flex;
                 justify-content: space-around;
                 margin-top: 2rem;
 
-                .stat-item {
+                .item-estatistica {
                     text-align: center;
 
-                    .stat-number {
+                    .numero-estatistica {
                         font-size: 2rem;
                         font-weight: bold;
                     }
 
-                    .stat-label {
+                    .rotulo-estatistica {
                         font-size: 1rem;
                         color: #666;
                     }
@@ -429,7 +429,7 @@ body {
     }
 }
 
-.features-section {
+.secao-recursos {
     padding: 4rem 0;
     background-color: #f5f5f5;
 
@@ -439,40 +439,40 @@ body {
     padding-bottom: 2rem;
    }
 
-    .section-header {
+    .cabecalho-secao {
         text-align: center;
         margin-bottom: 2rem;
 
-        .section-title {
+        .titulo-secao {
             font-size: 2.5rem;
             margin: 0;
         }
 
-        .section-subtitle {
+        .subtitulo-secao {
             font-size: 1.5rem;
             color: #666;
         }
     }
 
-    .features-grid {
+    .grade-recursos {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         gap: 2rem;
         padding: 0 2rem;
 
-        .feature-card {
+        .cartao-recurso {
             background: #fff;
             border-radius: 10px;
             padding: 1rem;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
 
-            .feature-icon{
+            .icone-recurso{
                 font-size: 3rem;
                 margin-bottom: 1rem;
             }
 
-            .feature-icon>img {
+            .icone-recurso>img {
                 border-radius: 30px;
                 height: 80px;
             }
