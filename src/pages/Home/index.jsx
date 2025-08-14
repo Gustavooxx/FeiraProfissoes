@@ -39,8 +39,6 @@ export default function Site() {
                     <h4>Seu Futuro Está Aqui</h4>
                     <h3>5ª Feira De Profissões </h3>
 
-                    <Link to='/Login'>Cadastre-se Agora</Link>
-
                 </div>
 
             </div>
