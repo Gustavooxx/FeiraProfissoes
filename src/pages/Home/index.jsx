@@ -147,6 +147,139 @@ export default function Site() {
                 </div>
             </section>
 
+            {/* Seção de Programação da Feira */}
+            <section className="secao-programacao">
+                <div className="container">
+                    <div className="cabecalho-secao">
+                        <h2 className="titulo-secao">Programação 5ª Feira de Profissões</h2>
+                        <p className="subtitulo-secao">Explore todas as oportunidades e atividades disponíveis</p>
+                    </div>
+
+                    <div className="programacao-container">
+                        {/* PÁTIO */}
+                        <div className="programa-card">
+                            <div className="programa-header">
+                                <h3>🌟 PÁTIO</h3>
+                                <span className="programa-subtitulo">Estandes e Empresas</span>
+                            </div>
+                            
+                            <div className="programa-content">
+                                <div className="empresas-destaque">
+                                    <h4>Empresas Convidadas:</h4>
+                                    <div className="empresas-grid">
+                                        <span className="empresa-tag">Casa da Mulher Paulistana</span>
+                                        <span className="empresa-tag">Conexão Bem Maior</span>
+                                        <span className="empresa-tag">Óticas Carol</span>
+                                        <span className="empresa-tag">STB</span>
+                                    </div>
+                                </div>
+
+                                <div className="stands-list">
+                                    <h4>Estandes e Atividades:</h4>
+                                    <ul>
+                                        <li><strong>CEDESP AVE MARIA:</strong> Metalmecânica e Tecnologia</li>
+                                        <li><strong>Troca de Livros:</strong> Compartilhe conhecimento</li>
+                                        <li><strong>Oficinas Técnicas:</strong> Eletromecânica, Auto Elétrica, Eletrotécnica</li>
+                                        <li><strong>Livros do Frei:</strong> Literatura e cultura</li>
+                                        <li><strong>Padaria do Frei:</strong> Doces e salgados artesanais</li>
+                                        <li><strong>Pastel & Bebidas:</strong> Embaixo da escada</li>
+                                    </ul>
+                                </div>
+
+                                <div className="salas-patio">
+                                    <h4>Salas Disponíveis:</h4>
+                                    <div className="salas-grid">
+                                        <div className="sala-item">
+                                            <span className="sala-numero">SALA 4</span>
+                                            <span className="sala-atividade">Óticas Carol</span>
+                                        </div>
+                                        <div className="sala-item">
+                                            <span className="sala-numero">SALA 5</span>
+                                            <span className="sala-atividade">Caixa</span>
+                                        </div>
+                                        <div className="sala-item">
+                                            <span className="sala-numero">SALA 6</span>
+                                            <span className="sala-atividade">Inglês</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 1° ANDAR */}
+                        <div className="programa-card">
+                            <div className="programa-header">
+                                <h3>🏢 1° ANDAR</h3>
+                                <span className="programa-subtitulo">Administração & Negócios</span>
+                            </div>
+                            <div className="programa-content">
+                                <div className="salas-andar">
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 18</span>
+                                        <span className="sala-descricao">ADMINISTRAÇÃO: Empreendedorismo e Logística</span>
+                                    </div>
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 19</span>
+                                        <span className="sala-descricao">CREAS</span>
+                                    </div>
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 20</span>
+                                        <span className="sala-descricao">ADMINISTRAÇÃO: RH, Contabilidade e Documentos Técnicos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 2° ANDAR */}
+                        <div className="programa-card">
+                            <div className="programa-header">
+                                <h3>🎨 2° ANDAR</h3>
+                                <span className="programa-subtitulo">Tecnologia & Criatividade</span>
+                            </div>
+                            <div className="programa-content">
+                                <div className="salas-andar">
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 24</span>
+                                        <span className="sala-descricao">Comunicação Visual: Corel Draw, Photoshop e Caricaturas</span>
+                                    </div>
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 25</span>
+                                        <span className="sala-descricao">Informática: Montagem, Configuração e Redes</span>
+                                    </div>
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 26</span>
+                                        <span className="sala-descricao">Informática: Programação</span>
+                                    </div>
+                                    <div className="sala-detalhe">
+                                        <span className="sala-numero">SALA 27</span>
+                                        <span className="sala-descricao">Elaboração de Currículo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 3° ANDAR */}
+                        <div className="programa-card">
+                            <div className="programa-header">
+                                <h3>🎯 3° ANDAR</h3>
+                                <span className="programa-subtitulo">Auditorio - Desenvolvimento Profissional</span>
+                            </div>
+                            <div className="programa-content">
+                                <div className="auditorio-atividades">
+                                    <div className="atividade-item">
+                                        <span className="atividade-icone">💼</span>
+                                        <span className="atividade-texto">Simulação de Entrevista de Emprego</span>
+                                    </div>
+                                    <div className="atividade-item">
+                                        <span className="atividade-icone">💻</span>
+                                        <span className="atividade-texto">Oficina de LinkedIn</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     )
