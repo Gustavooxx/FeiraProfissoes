@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Login() {
     return (
-        <div>
+        <div className='cadastro'>
             <div className="container">
                 <form>
                     <h1>Cadastro de Usuário</h1>
