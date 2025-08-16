@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,95 +6,144 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
- 
+    background: linear-gradient(135deg, #2d52f7 0%, #74a3ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 50px;
     width: 100%;
-    max-width: 400px;
+    max-width: 650px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     form {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #2d3748;
+            font-size: 32px;
+            font-weight: 600;
             margin-bottom: 10px;
+            background: linear-gradient(135deg, #2243fd, #76a8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .inputs, .inp {
-            input {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                font-size: 16px;
-                
-                &:focus {
-                    outline: none;
-                    border-color: #4CAF50;
-                }
-            }
-        }
-
-        .Lembrarsenha {
+        .form-group {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
+            flex-direction: column;
+            gap: 8px;
 
             label {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                cursor: pointer;
+                font-weight: 500;
+                color: #4a5568;
+                font-size: 15px;
+                letter-spacing: 0.5px;
             }
 
-            a {
-                color: #4CAF50;
-                text-decoration: none;
-                
-                &:hover {
-                    text-decoration: underline;
+            input {
+                width: 100%;
+                padding: 18px 22px;
+                border: 2px solid #e2e8f0;
+                border-radius: 12px;
+                font-size: 16px;
+                font-family: 'Inter', sans-serif;
+                transition: all 0.3s ease;
+                background: rgba(255, 255, 255, 0.8);
+
+                &::placeholder {
+                    color: #a0aec0;
                 }
+
+                &:focus {
+                    outline: none;
+                    border-color: #667eea;
+                    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+                    background: rgba(255, 255, 255, 1);
+                }
+
+                &:hover {
+                    border-color: #cbd5e0;
+                }
+            }
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
             }
         }
 
         button {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #264df6, #79a1ff);
             color: white;
-            padding: 12px;
+
+            padding: 20px;
+            margin-bottom: 10px;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 12px;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 
             &:hover {
-                background-color: #45a049;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            }
+
+            &:active {
+                transform: translateY(0);
             }
         }
 
-        .Cadastrar {
+        .login-link {
             text-align: center;
-            font-size: 14px;
+            margin-top: 20px;
+
+            p {
+                color: #718096;
+                font-size: 15px;
+            }
 
             a {
-                color: #4CAF50;
+                color: #667eea;
                 text-decoration: none;
-                
+                font-weight: 500;
+                transition: color 0.3s ease;
+
                 &:hover {
+                    color: #1823c0;
                     text-decoration: underline;
                 }
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 40px 30px;
+        max-width: 90%;
     }
 }
