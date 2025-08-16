@@ -32,7 +32,7 @@ export default function Site() {
                     </div>
                     
                     <div className="botoes-hero">
-                        <Link to="/Login" className="botao botao-primario">Entrar</Link>
+                        <Link to="/Login" className="botao botao-primario">Cadastre-se</Link>
                         <Link to="/Admin" className="botao botao-secundario">Área Admin</Link>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export default function Site() {
                                     <span className="rotulo-estatistica">Anos de História</span>
                                 </div>
                                 <div className="item-estatistica">
-                                    <span className="numero-estatistica">1000+</span>
+                                    <span className="numero-estatistica">5000+</span>
                                     <span className="rotulo-estatistica">Alunos Formados</span>
                                 </div>
                                 <div className="item-estatistica">
