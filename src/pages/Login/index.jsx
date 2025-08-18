@@ -39,6 +39,17 @@ export default function Login() {
                     </div>
 
                     <div className="form-group">
+                        <label>CPF *</label>
+                        <input 
+                            type='text' 
+                            name="CPF" 
+                            placeholder="000.000.000-00" 
+                            required
+                    
+                        />
+                    </div>
+
+                    <div className="form-group">
                         <label>Telefone *</label>
                         <input 
                             type="tel" 

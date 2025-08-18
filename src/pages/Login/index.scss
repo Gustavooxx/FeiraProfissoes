@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,16 +10,11 @@
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
-    width: 45rem;
+    width: 100%;
     margin: auto;
 }
 
 .container {
-
-
-
-    
-
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -90,24 +84,17 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
-
-            @media (max-width: 480px) {
-                grid-template-columns: 1fr;
-            }
         }
 
         button {
             background: linear-gradient(135deg, #264df6, #79a1ff);
             color: white;
-
             padding: 20px;
             margin-bottom: 10px;
             border: none;
             border-radius: 12px;
-
             font-size: 18px;
             font-weight: 600;
-
             transition: all 0.3s ease;
             margin-top: 10px;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
@@ -146,10 +133,107 @@
     }
 }
 
+// Responsive breakpoints
+
+// Tablets e telas médias
 @media (max-width: 768px) {
+    .cadastro {
+        padding: 15px;
+    }
+    
     .container {
-        margin: 20px;
-        padding: 40px 30px;
-        max-width: 90%;
+        margin: 10px;
+        padding: 35px 25px;
+        max-width: 95%;
+    }
+    
+    form {
+        h1 {
+            font-size: 28px;
+        }
+    }
+}
+
+// Telas pequenas (smartphones grandes)
+@media (max-width: 480px) {
+    .cadastro {
+        padding: 10px;
+    }
+    
+    .container {
+        margin: 5px;
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    
+    form {
+        gap: 20px;
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        
+        .form-group {
+            gap: 6px;
+            
+            label {
+                font-size: 14px;
+            }
+            
+            input {
+                padding: 15px 18px;
+                font-size: 16px;
+            }
+        }
+        
+        button {
+            padding: 18px;
+            font-size: 16px;
+        }
+    }
+}
+
+// Telas muito pequenas (smartphones antigos)
+@media (max-width: 360px) {
+    .container {
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+    
+    form {
+        h1 {
+            font-size: 22px;
+        }
+        
+        .form-group {
+            label {
+                font-size: 13px;
+            }
+            
+            input {
+                padding: 12px 15px;
+                font-size: 15px;
+            }
+        }
+        
+        button {
+            padding: 15px;
+            font-size: 15px;
+        }
+    }
+}
+
+// Telas muito grandes
+@media (min-width: 1200px) {
+    .container {
+        max-width: 700px;
+        padding: 60px;
+    }
+    
+    form {
+        h1 {
+            font-size: 36px;
+        }
     }
 }
