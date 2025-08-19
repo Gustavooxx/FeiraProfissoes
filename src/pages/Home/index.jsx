@@ -70,7 +70,7 @@ export default function Site() {
                                     <span className="rotulo-estatistica">Anos de História</span>
                                 </div>
                                 <div className="item-estatistica">
-                                    <span className="numero-estatistica">5000+</span>
+                                    <span className="numero-estatistica">50.000+</span>
                                     <span className="rotulo-estatistica">Alunos Formados</span>
                                 </div>
                                 <div className="item-estatistica">
