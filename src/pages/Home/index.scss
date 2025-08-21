@@ -378,7 +378,6 @@ body {
         .destaque-hero {
             font-size: 2rem;
             font-weight: bold;
-            background-color: #2c3fa760;
             border-radius: 20px;
             color: #60a5fa;
             margin: 1rem 0;
@@ -666,11 +665,19 @@ body {
                 font-weight: 600;
             }
 
+
             .empresas-grid {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 0.8rem;
+                gap: 1rem;
                 margin-bottom: 1.5rem;
+
+                .empresa-item{
+                    img {
+                        height: 80px;
+                        object-fit: contain;
+                    }
+                }
 
                 .empresa-tag {
                     background: linear-gradient(135deg, #031772 0%, #14168f 100%);

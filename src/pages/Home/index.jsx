@@ -1,11 +1,22 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect, useState, useRef } from 'react';
 
 export default function Site() {
+    const [animateStats, setAnimateStats] = useState(false);
+    const statsRef = useRef(null);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
+
     return (
         <div className='container-principal'>
-            {/* Seção Hero */}
-            <section className="secao-hero">
+
+            <section className="secao-hero" >
 
                 <div className="sobreposicao-hero"></div>
 
@@ -47,7 +58,7 @@ export default function Site() {
 
 
                         <div className='imagem-xavier'>
-                            <img src="/assets/images/fotofrei.jpg" alt="" />
+                            <img src="/assets/images/fotofrei.jpg" alt="" width='100px' />
                         </div>
 
                     </div>
@@ -58,7 +69,7 @@ export default function Site() {
             </section>
 
             {/* Sobre a seção */}
-            <section className="secao-sobre">
+            <section className="secao-sobre" data-aos="fade-up" >
 
                 <div className="container">
                     <div className="cabecalho-secao">
@@ -100,7 +111,7 @@ export default function Site() {
                 </div>
             </section>
 
-            <section className="secao-recursos">
+            <section className="secao-recursos" data-aos="fade-up">
                 <div className="container">
                     <div className="cabecalho-secao">
                         <h2 className="titulo-secao">O que Você Encontrará</h2>
@@ -164,7 +175,7 @@ export default function Site() {
             </section>
 
             {/* Seção de Programação da Feira */}
-            <section className="secao-programacao">
+            <section className="secao-programacao" data-aos="fade-up">
                 <div className="container">
                     <div className="cabecalho-secao">
                         <h2 className="titulo-secao">Programação 5ª Feira de Profissões</h2>
@@ -183,11 +194,21 @@ export default function Site() {
                                 <div className="empresas-destaque">
                                     <h4>Empresas Convidadas:</h4>
                                     <div className="empresas-grid">
-                                        <span className="empresa-tag">Casa da Mulher Paulistana</span>
-                                        <span className="empresa-tag">Conexão Bem Maior</span>
-                                        <span className="empresa-tag">Óticas Carol</span>
-                                        <span className="empresa-tag">STB</span>
+
+                                        <div className="empresa-item">
+                                            <img src="/assets/images/casadamulher.png" alt="casadamulher" />
+                                        </div>
+
+                                        <div className="empresa-item">
+                                            <img src="/assets/images/oticascarol.png" alt="Óticas Carol" />
+                                        </div>
+
+                                        <div className="empresa-item">
+                                            <img src="/assets/images/STB.jpg" alt="STB" />
+                                        </div>
+          
                                     </div>
+
                                 </div>
 
                                 <div className="stands-list">
