@@ -11,30 +11,47 @@ export default function Site() {
 
                 <div className="conteudo-hero">
 
-                    <div className="logo-hero">
-                        <img src="/assets/images/logofrei.jpeg" alt="Instituto Nossa Senhora De Fátima" />
+                    <div className='container-logo'>
+
+                        <div className="logo-hero">
+                            <img src="/assets/images/logofrei.jpeg" alt="Instituto Nossa Senhora De Fátima" />
+                            <h1 className="titulo-hero">
+                                Instituto Nossa Senhora De Fátima
+                            </h1>
+                        </div>
+
+                        <div className="botoes-hero">
+                            <Link to="/Login" className="botao botao-primario">Cadastre-se</Link>
+                            <Link to="/Admin" className="botao botao-secundario">Área Admin</Link>
+                        </div>
+
                     </div>
 
-                    <h1 className="titulo-hero">
-                        Instituto Nossa Senhora De Fátima
-                    </h1>
+                    <div className='container-hero'>
 
-                    <h2 className="subtitulo-hero">
-                        ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE
-                    </h2>
+                        <div className='textos'>
 
-                    <p className="descricao-hero">
-                        Seu Futuro Está Aqui
-                    </p>
+                            <h2 className="subtitulo-hero">
+                                ESFORÇO QUE TRANSFORMA, E O ORGULHO PERMANECE
+                            </h2>
 
-                    <div className="destaque-hero">
-                        <span className="texto-destaque">5ª Feira de Profissões</span>
+                            <p className="descricao-hero">
+                                Seu Futuro Está Aqui
+                            </p>
+
+                            <div className="destaque-hero">
+                                <span className="texto-destaque">5ª Feira de Profissões</span>
+                            </div>
+
+                        </div>
+
+
+                        <div className='imagem-xavier'>
+                            <img src="/assets/images/fotofrei.jpg" alt="" />
+                        </div>
+
                     </div>
-                    
-                    <div className="botoes-hero">
-                        <Link to="/Login" className="botao botao-primario">Cadastre-se</Link>
-                        <Link to="/Admin" className="botao botao-secundario">Área Admin</Link>
-                    </div>
+
                 </div>
 
 
@@ -83,7 +100,6 @@ export default function Site() {
                 </div>
             </section>
 
-            {/* Seção de Recursos */}
             <section className="secao-recursos">
                 <div className="container">
                     <div className="cabecalho-secao">
@@ -159,7 +175,7 @@ export default function Site() {
                         {/* PÁTIO */}
                         <div className="programa-card">
                             <div className="programa-header">
-                                <h3>🌟 PÁTIO</h3>
+                                <h3> PÁTIO</h3>
                                 <span className="programa-subtitulo">Estandes e Empresas</span>
                             </div>
                             
@@ -209,7 +225,7 @@ export default function Site() {
                         {/* 1° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
-                                <h3>🏢 1° ANDAR</h3>
+                                <h3> 1° ANDAR</h3>
                                 <span className="programa-subtitulo">Administração & Negócios</span>
                             </div>
                             <div className="programa-content">
@@ -233,7 +249,7 @@ export default function Site() {
                         {/* 2° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
-                                <h3>🎨 2° ANDAR</h3>
+                                <h3> 2° ANDAR</h3>
                                 <span className="programa-subtitulo">Tecnologia & Criatividade</span>
                             </div>
                             <div className="programa-content">
@@ -261,17 +277,17 @@ export default function Site() {
                         {/* 3° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
-                                <h3>🎯 3° ANDAR</h3>
+                                <h3> 3° ANDAR</h3>
                                 <span className="programa-subtitulo">Auditorio - Desenvolvimento Profissional</span>
                             </div>
                             <div className="programa-content">
                                 <div className="auditorio-atividades">
                                     <div className="atividade-item">
-                                        <span className="atividade-icone">💼</span>
+                                        <span className="atividade-icone"></span>
                                         <span className="atividade-texto">Simulação de Entrevista de Emprego</span>
                                     </div>
                                     <div className="atividade-item">
-                                        <span className="atividade-icone">💻</span>
+                                        <span className="atividade-icone"></span>
                                         <span className="atividade-texto">Oficina de LinkedIn</span>
                                     </div>
                                 </div>
