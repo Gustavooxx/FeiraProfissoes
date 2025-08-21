@@ -28,7 +28,7 @@ export default function Site() {
                     </p>
 
                     <div className="destaque-hero">
-                        <span className="texto-destaque">5ª Feira De Profissões</span>
+                        <span className="texto-destaque">5ª Feira de Profissões</span>
                     </div>
                     
                     <div className="botoes-hero">
