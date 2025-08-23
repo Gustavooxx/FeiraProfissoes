@@ -600,7 +600,6 @@ body {
     }
 
     .programa-card {
-  
         border-radius: 20px;
         padding: 2.5rem;
         box-shadow: 
@@ -667,7 +666,7 @@ body {
             .empresas-grid {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 1rem;
+                gap: 2rem;
                 margin-bottom: 1.5rem;
 
                 .empresa-item{
@@ -677,21 +676,7 @@ body {
                     }
                 }
 
-                .empresa-tag {
-                    background: linear-gradient(135deg, #031772 0%, #14168f 100%);
-                    color: white;
-                    padding: 0.5rem 1rem;
-                    border-radius: 25px;
-                    font-size: 0.9rem;
-                    font-weight: 500;
-                    transition: all 0.3s ease;
-                    cursor: default;
-
-                    &:hover {
-                        transform: translateY(-2px);
-                        box-shadow: 0 5px 15px #1b39be66;
-                    }
-                }
+                
             }
 
             ul {
@@ -744,7 +729,7 @@ body {
                     .sala-numero {
                         display: block;
                         font-weight: bold;
-                        color: #091e7e;
+                        color: #3b82f6;
                         font-size: 1.1rem;
                         margin-bottom: 0.5rem;
                     }
@@ -762,7 +747,7 @@ body {
                     padding: 1rem 1.5rem;
                     margin-bottom: 0.8rem;
                     border-radius: 10px;
-                    border-left: 4px solid #091c72;
+                    border-left: 4px solid #3b82f6;
                     transition: all 0.3s ease;
 
                     &:hover {
@@ -772,7 +757,7 @@ body {
 
                     .sala-numero {
                         font-weight: bold;
-                        color: #091c72;
+                        color: #3b82f6;
                         font-size: 1.1rem;
                         margin-right: 1rem;
                     }
@@ -785,7 +770,7 @@ body {
 
             .auditorio-atividades {
                 .atividade-item {
-                    border-left:4px solid #091c72;
+                    border-left:4px solid #3b82f6;
                     display: flex;
                     align-items: center;
                     background: #f8f9fa;

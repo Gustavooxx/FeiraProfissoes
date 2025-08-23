@@ -191,6 +191,7 @@ export default function Site() {
                             </div>
                             
                             <div className="programa-content">
+                                
                                 <div className="empresas-destaque">
                                     <h4>Empresas Convidadas:</h4>
                                     <div className="empresas-grid">
@@ -205,6 +206,11 @@ export default function Site() {
 
                                         <div className="empresa-item">
                                             <img src="/assets/images/STB.jpg" alt="STB" />
+                                        </div>
+
+                                                                                                            <div
+                                        className="empresa-item">
+                                            <img src="/assets/images/conexaobemmaior.png" alt="STB" />
                                         </div>
           
                                     </div>
