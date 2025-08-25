@@ -40,7 +40,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
+
     &:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
@@ -54,7 +54,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: 1px solid rgba(59, 130, 246, 0.1);
-    
+
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
@@ -85,6 +85,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 
 @mixin button-hover {
     transition: all 0.3s ease;
+
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 25px #00000033;
@@ -106,7 +107,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     justify-content: center;
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
     overflow: hidden;
-    
+
     &::before {
         content: '';
         position: absolute;
@@ -116,14 +117,14 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         bottom: 0;
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="300" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="300" r="200" fill="rgba(255,255,255,0.1)"/></svg>');
     }
-    
+
     .conteudo-hero {
         position: relative;
         text-align: center;
         max-width: 1200px;
         margin: 0 auto;
         padding: 2rem;
-        
+
         .container-logo {
             @include glass-effect;
             position: relative;
@@ -135,19 +136,19 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 2rem;
-            box-shadow: 0px 0px 90px #475163a9;    
-                    
+            box-shadow: 0px 0px 90px #475163a9;
+
             .logo-hero {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                
+
                 img {
                     width: 80px;
                     height: 80px;
-                    border: 3px solid rgba(255, 255, 255, 0.3);
+                    border: 3px solid #ffffff4d;
                 }
-                
+
                 h1 {
                     font-size: 1.5rem;
                     font-weight: 700;
@@ -155,22 +156,22 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
                 }
             }
-            
+
             .botoes-hero {
                 display: flex;
                 gap: 1rem;
                 flex-wrap: wrap;
-                
+
                 .botao {
                     @include button-modern;
                     padding: 0.75rem 2rem;
                     font-size: 1rem;
-                    
+
                     &.botao-primario {
                         background: linear-gradient(135deg, #60a5fa, #3b82f6);
                         color: white;
                     }
-                    
+
                     &.botao-secundario {
                         background: rgba(255, 255, 255, 0.2);
                         color: white;
@@ -179,40 +180,46 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 }
             }
         }
-        
+
         .container-hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            
+
             .textos {
                 text-align: left;
-                
+
                 .subtitulo-hero {
                     font-size: 2.5rem;
                     font-weight: 700;
                     color: white;
                     margin-bottom: 1rem;
                 }
-                
+
                 .descricao-hero {
                     font-size: 1.5rem;
                     color: rgba(255, 255, 255, 0.9);
-                    margin-bottom: 1.5rem;
+
+                    @media (max-width: 360px) {
+                        margin-bottom: 5rem;
+                    }
                 }
-                
+
                 .destaque-hero {
                     .texto-destaque {
-                        font-size: 2rem;
+                        font-size: 1rem;
                         font-weight: 800;
                         background: linear-gradient(135deg, #ffffff, #dbeafe);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
+
+
+
                     }
                 }
             }
-            
+
             .imagem-xavier {
                 img {
                     width: 400px;
@@ -235,13 +242,13 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 .cabecalho-secao {
     text-align: center;
     padding-bottom: 4rem;
-    
+
     .titulo-secao {
         font-size: 2.5rem;
         padding-bottom: 1rem;
         color: #1e293b;
     }
-    
+
     .subtitulo-secao {
         font-size: 1.2rem;
         opacity: 0.8;
@@ -249,7 +256,7 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .secao-sobre {
-        
+
     .conteudo-sobre {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -257,11 +264,11 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         align-items: center;
         padding-bottom: 1rem;
 
-        
+
         @media (max-width: 768px) {
             grid-template-columns: 1fr;
         }
-        
+
         .imagem-sobre {
             img {
                 width: 100%;
@@ -271,37 +278,38 @@ $gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
                 box-shadow: 0 10px 30px #0000004d;
             }
         }
-        
+
         .texto-sobre {
             text-align: justify;
+
             h3 {
                 font-size: 2rem;
                 padding-bottom: 1.5rem;
                 color: #1e293b;
             }
-            
+
             p {
                 padding-bottom: 1.5rem;
                 line-height: 1.8;
                 opacity: 0.9;
             }
-            
+
             .estatisticas {
                 display: flex;
                 gap: 2rem;
                 margin-top: 2rem;
                 padding-bottom: 1rem;
-                
+
                 .item-estatistica {
                     text-align: center;
-                    
+
                     .numero-estatistica {
                         display: block;
                         font-size: 2rem;
                         font-weight: bold;
-                        color: #3b82f6;       
-                 }
-                    
+                        color: #3b82f6;
+                    }
+
                     .rotulo-estatistica {
                         font-size: 0.9rem;
                         opacity: 0.8;
@@ -403,6 +411,7 @@ body {
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+
         .scroll-arrow {
             width: 30px;
             height: 30px;
@@ -493,31 +502,31 @@ body {
     padding: 6rem 0;
     background: white;
 
-    .cabecalho-secao>h2{
-        color: #1e293b  ;
+    .cabecalho-secao>h2 {
+        color: #1e293b;
     }
 
-    .cabecalho-secao{
+    .cabecalho-secao {
         padding-top: 2rem;
         padding-bottom: 2rem;
         color: #64748b;
 
     }
-    
+
     .grade-recursos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
         padding-bottom: 2rem;
-        
+
         .cartao-recurso {
             @include card-modern;
             text-align: center;
             padding: 3rem 2rem;
-            
+
             .icone-recurso {
                 margin-bottom: 1.5rem;
-                
+
                 img {
                     width: 80px;
                     height: 80px;
@@ -526,14 +535,14 @@ body {
                     background: linear-gradient(135deg, #60a5fa, #3b82f6);
                 }
             }
-            
+
             h3 {
                 font-size: 1.5rem;
                 font-weight: 700;
                 color: #1e293b;
                 margin-bottom: 1rem;
             }
-            
+
             p {
                 font-size: 1rem;
                 color: #64748b;
@@ -567,6 +576,7 @@ body {
 
     .cabecalho-secao {
         margin-top: 1rem;
+
         .titulo-secao {
             color: #2c3e50;
             font-size: 2.8rem;
@@ -593,7 +603,7 @@ body {
     .programa-card {
         border-radius: 20px;
         padding: 2.5rem;
-        box-shadow: 
+        box-shadow:
             0 10px 30px rgba(0, 0, 0, 0.1),
             0 1px 8px rgba(0, 0, 0, 0.06);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -608,7 +618,7 @@ body {
             left: -100%;
             width: 100%;
             height: 100%;
-  
+
             transition: left 0.5s;
         }
 
@@ -618,7 +628,7 @@ body {
 
         &:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 
+            box-shadow:
                 0 20px 40px rgba(0, 0, 0, 0.15),
                 0 2px 10px rgba(0, 0, 0, 0.08);
         }
@@ -660,14 +670,24 @@ body {
                 gap: 2rem;
                 margin-bottom: 1.5rem;
 
-                .empresa-item{
+                @media (max-width: 430px) {
+                    gap: 1.5rem;
+                }
+
+
+                .empresa-item {
                     img {
                         height: 80px;
                         object-fit: contain;
+
+                        @media (max-width: 430px) {
+                            height: 65px;
+                        }
+
                     }
                 }
 
-                
+
             }
 
             ul {
@@ -761,7 +781,7 @@ body {
 
             .auditorio-atividades {
                 .atividade-item {
-                    border-left:4px solid #3b82f6;
+                    border-left: 4px solid #3b82f6;
                     display: flex;
                     align-items: center;
                     background: #f8f9fa;
@@ -842,7 +862,7 @@ body {
     }
 
     .secao-hero {
-        padding: 3rem 0; 
+        padding: 3rem 0;
     }
 }
 
@@ -851,27 +871,27 @@ body {
         .conteudo-hero {
             .container-hero {
                 gap: 3rem;
-                
+
                 .textos {
                     .subtitulo-hero {
                         font-size: 2.2rem;
                     }
-                    
+
                     .descricao-hero {
                         font-size: 1.3rem;
                     }
-                    
+
                     .destaque-hero {
                         .texto-destaque {
                             font-size: 1.8rem;
                         }
                     }
                 }
-                
+
                 .imagem-xavier {
                     img {
-                        width: 100%; 
-                        height: auto; 
+                        width: 100%;
+                        height: auto;
                         max-width: 350px;
                     }
                 }
@@ -886,18 +906,18 @@ body {
             .container-logo {
                 bottom: 4rem;
                 padding: 1.5rem;
-                
+
                 .logo-hero {
                     h1 {
                         font-size: 1.3rem;
                     }
-                    
+
                     img {
                         width: 70px;
                         height: 70px;
                     }
                 }
-                
+
                 .botoes-hero {
                     .botao {
                         padding: 0.6rem 1.5rem;
@@ -905,32 +925,32 @@ body {
                     }
                 }
             }
-            
+
             .container-hero {
                 gap: 2.5rem;
-                
+
                 .textos {
                     .subtitulo-hero {
                         font-size: 2rem;
                     }
-                    
+
                     .descricao-hero {
                         font-size: 1.2rem;
                         margin-bottom: 1rem;
                     }
-                    
+
                     .destaque-hero {
                         .texto-destaque {
                             font-size: 1.6rem;
                         }
                     }
                 }
-                
+
                 .imagem-xavier {
                     img {
                         width: 100%;
                         height: auto;
-                        max-width: 300px; 
+                        max-width: 300px;
                     }
                 }
             }
@@ -949,66 +969,67 @@ body {
                 flex-direction: column;
                 text-align: center;
                 gap: 1.5rem;
-                
+
                 .logo-hero {
                     flex-direction: column;
                     gap: 0.8rem;
-                    
+
                     h1 {
                         font-size: 1.2rem;
                     }
-                    
+
                     img {
                         width: 60px;
                         height: 60px;
                     }
                 }
-                
+
                 .botoes-hero {
                     flex-direction: column;
                     width: 100%;
                     max-width: 250px;
-                    
+
                     .botao {
                         width: 100%;
                         padding: 0.8rem 1rem;
                     }
                 }
             }
-            
+
             .container-hero {
                 grid-template-columns: 1fr;
                 gap: 2rem;
                 text-align: center;
-                
+
                 .textos {
                     text-align: center;
                     order: 2;
-                    
+
                     .subtitulo-hero {
                         font-size: 1.8rem;
                         margin-bottom: 0.8rem;
                     }
-                    
+
                     .descricao-hero {
                         font-size: 1.1rem;
                         margin-bottom: 0.8rem;
                     }
-                    
+
                     .destaque-hero {
                         .texto-destaque {
                             font-size: 1.4rem;
+                            margin-bottom: 0.8rem;
                         }
                     }
                 }
-                
+
                 .imagem-xavier {
                     order: 1;
-                    
+
                     img {
-                        width: 100%; 
+                        width: 100%;
                         height: auto;
-                        max-width: 250px; 
+                        max-width: 250px;
                     }
                 }
             }
@@ -1023,18 +1044,18 @@ body {
                 padding: 1rem;
                 bottom: 1rem;
                 margin-bottom: 1rem;
-                
+
                 .logo-hero {
                     h1 {
                         font-size: 1rem;
                     }
-                    
+
                     img {
                         width: 50px;
                         height: 50px;
                     }
                 }
-                
+
                 .botoes-hero {
                     .botao {
                         padding: 0.7rem 1rem;
@@ -1042,31 +1063,32 @@ body {
                     }
                 }
             }
-            
+
             .container-hero {
                 gap: 1.5rem;
-                
+
                 .textos {
                     .subtitulo-hero {
                         font-size: 1.5rem;
                     }
-                    
+
                     .descricao-hero {
                         font-size: 1rem;
                     }
-                    
+
                     .destaque-hero {
                         .texto-destaque {
                             font-size: 1.2rem;
+                            margin-bottom: 0.5rem;
                         }
                     }
                 }
-                
+
                 .imagem-xavier {
                     img {
                         width: 100%;
-                        height: auto; 
-                        max-width: 200px; 
+                        height: auto;
+                        max-width: 200px;
                     }
                 }
             }
@@ -1074,198 +1096,206 @@ body {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 390px) {
     .secao-hero {
         .conteudo-hero {
             .container-logo {
+                padding: 0.8rem;    
+                bottom: 3rem;
+                margin-bottom: 0.5rem;
+                gap: 1rem;
+                
                 .logo-hero {
                     h1 {
                         font-size: 0.9rem;
                     }
                 }
             }
-            
+
             .container-hero {
                 .textos {
                     .subtitulo-hero {
                         font-size: 1.3rem;
                     }
-                    
+
                     .destaque-hero {
+                        margin-bottom: 3rem;
                         .texto-destaque {
                             font-size: 1.1rem;
                         }
                     }
                 }
-                
+
                 .imagem-xavier {
                     img {
-                        width: 100%; 
-                        height: auto; 
-                        max-width: 180px; 
+                        width: 100%;
+                        height: auto;
+                        max-width: 180px;
+                        margin-bottom: -2rem;
                     }
                 }
+
+
             }
         }
     }
 }
 
 @media (max-width: 1024px) {
-  .secao-hero {
-    .conteudo-hero {
-      padding: 1.5rem;
-      text-align: center;
+    .secao-hero {
+        .conteudo-hero {
+            padding: 1.5rem;
+            text-align: center;
 
-      .container-hero {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
+            .container-hero {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
 
 
-      .imagem-xavier img {
-        width: 80%;
-        max-width: 250px;
-      }
-    }
-  }
-
-  .secao-sobre {
-    .conteudo-sobre {
-      flex-direction: column;
-      text-align: center;
-
-      .imagem-sobre img {
-        width: 80%;
-        max-width: 250px;
-        margin-bottom: 1.5rem;
-      }
-
-      .texto-sobre {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .secao-galeria {
-    .galeria-fotos {
-      flex-direction: column;
-      gap: 1rem;
-
-      img {
-        width: 90%;
-        max-width: 300px;
-      }
-    }
-  }
-
-  .secao-recursos {
-    .grade-recursos {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  }
-
-  .secao-programacao {
-    .programacao-container {
-      gap: 2rem;
+            .imagem-xavier img {
+                width: 80%;
+                max-width: 250px;
+            }
+        }
     }
 
-    .programa-card {
-      padding: 1rem;
+    .secao-sobre {
+        .conteudo-sobre {
+            flex-direction: column;
+            text-align: center;
+
+            .imagem-sobre img {
+                width: 80%;
+                max-width: 250px;
+                margin-bottom: 1.5rem;
+            }
+
+            .texto-sobre {
+                max-width: 100%;
+            }
+        }
     }
-  }
+
+    .secao-galeria {
+        .galeria-fotos {
+            flex-direction: column;
+            gap: 1rem;
+
+            img {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    }
+
+    .secao-recursos {
+        .grade-recursos {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+
+    .secao-programacao {
+        .programacao-container {
+            gap: 2rem;
+        }
+
+        .programa-card {
+            padding: 1rem;
+        }
+    }
 }
 
 @media (max-width: 768px) {
-  .secao-hero {
-    .conteudo-hero {
-        .container-logo{
-            margin-top: 10rem;
+    .secao-hero {
+        .conteudo-hero {
+            .container-logo {
+                margin-top: 10rem;
+            }
+
+            .titulo-hero {
+                font-size: 2.5rem;
+            }
+
+            .subtitulo-hero {
+                font-size: 1.5rem;
+            }
+
+            .descricao-hero {
+                font-size: 1rem;
+            }
+
+            .botoes-hero {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
-
-      .titulo-hero {
-        font-size: 2.5rem;
-      }
-
-      .subtitulo-hero {
-        font-size: 1.5rem;
-      }
-
-      .descricao-hero {
-        font-size: 1rem;
-      }
-
-      .botoes-hero {
-        flex-direction: column;
-        gap: 1rem;
-      }
     }
-  }
 
-  .secao-sobre {
-    .conteudo-sobre {
-      .imagem-sobre img {
-        width: 100%;
-        max-width: 200px;
-      }
+    .secao-sobre {
+        .conteudo-sobre {
+            .imagem-sobre img {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
     }
-  }
 
-  .secao-galeria {
-    .galeria-fotos {
-      img {
-        width: 100%;
-        max-width: 250px;
-      }
+    .secao-galeria {
+        .galeria-fotos {
+            img {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
     }
-  }
 
-  .secao-recursos {
-    .grade-recursos {
-      gap: 1rem;
+    .secao-recursos {
+        .grade-recursos {
+            gap: 1rem;
+        }
     }
-  }
 }
 
 
 @media (max-width: 480px) {
     .secao-hero {
-      .conteudo-hero {
-        .titulo-hero {
-          font-size: 2rem;
+        .conteudo-hero {
+            .titulo-hero {
+                font-size: 2rem;
+            }
+
+            .subtitulo-hero {
+                font-size: 1.2rem;
+            }
+
+            .descricao-hero {
+                font-size: 0.9rem;
+            }
         }
-  
-        .subtitulo-hero {
-          font-size: 1.2rem;
-        }
-  
-        .descricao-hero {
-          font-size: 0.9rem;
-        }
-      }
-    }
-  
-    .secao-sobre {
-      .conteudo-sobre {
-        .imagem-sobre img {
-          max-width: 150px;
-        }
-      }
-    }
-  
-    .secao-galeria {
-      .galeria-fotos {
-        img {
-          max-width: 200px;
-        }
-      }
     }
 
-    
-  }
+    .secao-sobre {
+        .conteudo-sobre {
+            .imagem-sobre img {
+                max-width: 150px;
+            }
+        }
+    }
+
+    .secao-galeria {
+        .galeria-fotos {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+
+}
 
 .footer-social {
-    background: linear-gradient(120deg,#D4DEEA 10% ,#c3cfe2 90%);
+    background: linear-gradient(120deg, #D4DEEA 10%, #c3cfe2 90%);
     padding: 2rem 0;
     text-align: center;
 
@@ -1280,7 +1310,7 @@ body {
         gap: 1rem;
     }
 
-    .container{
+    .container {
         background-color: #1e3a8a;
 
         @media (max-width: 768px) {
@@ -1292,7 +1322,7 @@ body {
             width: 340px;
         }
 
-            @media (max-width: 390px) {
+        @media (max-width: 390px) {
             width: 370px;
         }
 
@@ -1314,7 +1344,7 @@ body {
             justify-content: center;
             gap: 3rem;
 
-            @media (max-width: 768px) { 
+            @media (max-width: 768px) {
                 margin-bottom: 1rem;
                 gap: 1rem;
             }
@@ -1338,7 +1368,7 @@ body {
 
                     @media (max-width: 375px) {
                         width: 30px;
-                        height:30px;
+                        height: 30px;
                     }
                 }
 
