@@ -19,20 +19,20 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    padding: 50px;
+    padding: 20px; /* Reduced from 50px */
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 
     form {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 15px; /* Reduced from 25px */
 
         h1 {
             text-align: center;
             color: #2d3748;
-            font-size: 32px;
+            font-size: 28px; /* Reduced from 32px */
             font-weight: 600;
             margin-bottom: 10px;
             background: linear-gradient(135deg, #2243fd, #76a8ff);
@@ -55,7 +55,7 @@
 
             input {
                 width: 100%;
-                padding: 18px 22px;
+                padding: 12px 15px; /* Reduced from 18px 22px */
                 border: 2px solid #e2e8f0;
                 border-radius: 12px;
                 font-size: 16px;
@@ -103,7 +103,7 @@
         button {
             background: linear-gradient(135deg, #264df6, #79a1ff);
             color: white;
-            padding: 20px;
+            padding: 16px; /* Reduced from 20px */
             margin-bottom: 10px;
             border: none;
             border-radius: 12px;
@@ -147,9 +147,7 @@
     }
 }
 
-// Responsive breakpoints
 
-// Tablets e telas médias
 @media (max-width: 768px) {
     .cadastro {
         padding: 15px;
@@ -168,7 +166,6 @@
     }
 }
 
-// Telas pequenas (smartphones grandes)
 @media (max-width: 480px) {
     .cadastro {
         padding: 10px;
@@ -208,7 +205,6 @@
     }
 }
 
-// Telas muito pequenas (smartphones antigos)
 @media (max-width: 360px) {
     .container {
         padding: 20px 15px;
@@ -238,16 +234,15 @@
     }
 }
 
-// Telas muito grandes
 @media (min-width: 1200px) {
     .container {
-        max-width: 700px;
-        padding: 60px;
+        max-width: 600px;
+        padding: 40px;
     }
     
     form {
         h1 {
-            font-size: 36px;
+            font-size: 32px;
         }
     }
 }

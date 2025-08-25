@@ -68,7 +68,6 @@ export default function Site() {
 
             </section>
 
-            {/* Sobre a seção */}
             <section className="secao-sobre" data-aos="fade-up" >
 
                 <div className="container">
@@ -174,7 +173,6 @@ export default function Site() {
                 </div>
             </section>
 
-            {/* Seção de Programação da Feira */}
             <section className="secao-programacao" data-aos="fade-up">
                 <div className="container">
                     <div className="cabecalho-secao">
@@ -183,7 +181,6 @@ export default function Site() {
                     </div>
 
                     <div className="programacao-container">
-                        {/* PÁTIO */}
                         <div className="programa-card">
                             <div className="programa-header">
                                 <h3> PÁTIO</h3>
@@ -249,7 +246,6 @@ export default function Site() {
                             </div>
                         </div>
 
-                        {/* 1° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
                                 <h3> 1° ANDAR</h3>
@@ -273,7 +269,6 @@ export default function Site() {
                             </div>
                         </div>
 
-                        {/* 2° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
                                 <h3> 2° ANDAR</h3>
@@ -301,7 +296,6 @@ export default function Site() {
                             </div>
                         </div>
 
-                        {/* 3° ANDAR */}
                         <div className="programa-card">
                             <div className="programa-header">
                                 <h3> 3° ANDAR</h3>
@@ -324,7 +318,6 @@ export default function Site() {
                 </div>
             </section>
 
-            {/* Footer com ícones de redes sociais */}
             <footer className="footer-social">
 
                 <div className="container">
