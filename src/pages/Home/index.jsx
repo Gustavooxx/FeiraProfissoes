@@ -139,7 +139,7 @@ export default function Site() {
                             <img src="/assets/images/iconescurso/iconemecanica.svg" alt="iconeinformatica"  />
                             </div>
                             <h3>Eletromecânica</h3>
-                            <p>Mecânica e automação integradas</p>
+                            <p>Automa</p>
                         </div>
 
                         <div className="cartao-recurso">
@@ -204,8 +204,8 @@ export default function Site() {
                                         <div className="empresa-item">
                                             <img src="/assets/images/STB.jpg" alt="STB" />
                                         </div>
-
-                                                                                                            <div
+                                    
+                                       <div
                                         className="empresa-item">
                                             <img src="/assets/images/conexaobemmaior.png" alt="STB" />
                                         </div>
