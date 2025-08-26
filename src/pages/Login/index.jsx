@@ -1,80 +1,63 @@
 import './index.scss'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import axios from "axios";
+
 
 export default function Login() {
-    const [formData, setFormData] = useState({
-        nome: '',
-        email: '',
-        CPF: '',
-        telefone: '',
-        Chegada: ''
+ const [formData, setFormData] = useState({
 
-    })
+    nome: '',
+    escolaridade: '',
+    interesse: '',
+    previsao_chegada: '',
+    email: '',
+    sabendo_feira: '',
+    telefone: '',
+    ex_aluno: 0,
+    cpf: ''
 
-    const [errors, setErrors] = useState({
-        CPF: '',
-        telefone: '',
-    })
+ });
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target
-        let newErrors = { ...errors }
+ const [mensagem,setMensagem] = useState("");
+ const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: name === "ex_aluno" ? Number(value) : value
+    }));
+  };
+  
 
-        // Remove special characters for counting
-        const cleanValue = value.replace(/[^0-9]/g, '')
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // evita reload da página
 
-        switch (name) {
+let url = 'http://localhost:5010/cadastro'
+    try {
+    const resposta = await axios.post(url,formData);
+    
+    setMensagem("Usuário cadastrado com sucesso!");
+    console.log("Resposta da API:", resposta.data);
 
-            case 'CPF':
-                if (cleanValue.length > 11) {
-                    newErrors.CPF = 'O CPF deve ter no máximo 11 dígitos'
-                } else {
-                    newErrors.CPF = ''
-                }
-                break
-            case 'telefone':
-                if (cleanValue.length > 11) {
-                    newErrors.telefone = 'O telefone deve ter no máximo 11 dígitos'
-                } else {
-                    newErrors.telefone = ''
-                }
-                break
-                case 'Chegada':
-                if (cleanValue.length > 4) {
-                    newErrors.Chegada = 'O telefone deve ter no máximo 11 dígitos'
-                } else {
-                    newErrors.Chegada = ''
-                }
-                break
+      // limpa o formulário
+      setFormData({
+        nome: "",
+        escolaridade: "",
+        interesse: "",
+        previsao_chegada: "",
+        email: "",
+        sabendo_feira: "",
+        telefone: "",
+        ex_aluno: 0,
+        cpf: ""
+      });
 
-        }
-
-        setErrors(newErrors)
-        setFormData({ ...formData, [name]: value })
+    } catch (error) {
+      console.error("Erro ao cadastrar:", error);
+      setMensagem("Erro ao cadastrar usuário!");
     }
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-
-        // Validate all fields before submission
-        let newErrors = {}
-
-
-        const cleanCPF = formData.CPF.replace(/[^0-9]/g, '')
-        if (cleanCPF.length > 11) {
-            newErrors.CPF = 'O CPF deve ter no máximo 11 dígitos'
-        }
-
-        const cleanTelefone = formData.telefone.replace(/[^0-9]/g, '')
-        if (cleanTelefone.length > 11) {
-            newErrors.telefone = 'O telefone deve ter no máximo 11 dígitos'
-        }
-
-
-        setErrors(newErrors)
-
-    }
 
     return (
         <div className='cadastro'>
@@ -90,7 +73,7 @@ export default function Login() {
                             placeholder="Digite seu nome completo"
                             required
                             value={formData.nome}
-                            onChange={handleInputChange}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -98,11 +81,11 @@ export default function Login() {
                         <label>Email *</label>
                         <input
                             type="email"
-                            name="email"
+                            name="email"    
                             placeholder="seu@email.com"
                             required
                             value={formData.email}
-                            onChange={handleInputChange}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -112,10 +95,10 @@ export default function Login() {
                         <label>Previsão de Chegada</label>
                         <input 
                         type="text"
-                        name= 'Chegada' 
+                        name= 'previsao_chegada' 
                         placeholder='00:00'
-                        value={formData.Chegada}
-                        onChange={handleInputChange}
+                        value={formData.previsao_chegada}
+                        onChange={handleChange}
 
                         />
                         </div>
@@ -125,14 +108,14 @@ export default function Login() {
                         <label>CPF *</label>
                         <input
                             type='text'
-                            name="CPF"
+                            name="cpf"
                             placeholder="000.000.000-00"
                             required
                             maxLength={14}
-                            value={formData.CPF}
-                            onChange={handleInputChange}
+                            value={formData.cpf}
+                            onChange={handleChange}
                         />
-                        {errors.CPF && <span className="error-message">{errors.CPF}</span>}
+                       
                     </div>
 
                     <div className="form-group">
@@ -144,59 +127,69 @@ export default function Login() {
                             required
                             maxLength={15}
                             value={formData.telefone}
-                            onChange={handleInputChange}
+                            onChange={handleChange}
                         />
-                        {errors.telefone && <span className="error-message">{errors.telefone}</span>}
+                       
                     </div>
 
                     <div className='form-group'>
                         <label >Como soube da Feira? *</label>
-                        <select id="sabendoFeira" name="sabendo">
+                        <select id="sabendoFeira" name="sabendo_feira"
+                         value={formData.sabendo_feira}
+                         onChange={handleChange}>
                             <option value="">Selecione...</option>
-                            <option value="insta">Instagram</option>
-                            <option value="face">Facebook</option>
-                            <option value="familha">Amigos ou família</option>
-                            <option value="outros">Outros...</option>
+                            <option value="Insta">Instagram</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Amigos ou família">Amigos ou família</option>
+                            <option value="Outros">Outros...</option>
                             </select>
                     </div> 
                     <div className='form-group'>
                         <label >Interesse *</label>
-                        <select id="interesse" name="interesse">
+                        <select id="interesse" name="interesse"
+                         value={formData.interesse}
+                         onChange={handleChange}>
                             <option value="">Selecione...</option>
                             <option value="info">Informática</option>
                             <option value="CV">Comunicação Visual</option>
                             <option value="ADM">Admiministração</option>
-                            <option value="mecanica">Eletromecânica</option>
-                            <option value="eletrica">Automação Residencial</option>
-                            <option value="ingles">Inglês</option>
-                            <option value="conhecer">Conhecer o local</option>
+                            <option value="Mecânica">Eletromecânica</option>
+                            <option value="Elétrica">Automação Residencial</option>
+                            <option value="Inglês">Inglês</option>
+                            <option value="Conhecer">Conhecer o local</option>
                         </select>
                     </div> 
 
                     <div className='form-group'>
                         <label>Escolaridade *</label>
-                        <select id="escolaridade" name="escolaridade">
+                        <select id="escolaridade" name="escolaridade"
+                         value={formData.escolaridade}
+                         onChange={handleChange}>
                             <option value="">Selecione...</option>
-                            <option value="fundamental">Ensino Fundamental</option>
-                            <option value="medio">Ensino Médio</option>
-                            <option value="superior">Ensino Superior</option>
+                            <option value="Fundamental">Ensino Fundamental</option>
+                            <option value="Médio">Ensino Médio</option>
+                            <option value="Superior">Ensino Superior</option>
                         </select>
                     </div>
 
                     <div className='form-group'>
                         <label>É ex aluno *</label>
-                        <select id="exalun" name="ex aluno">
+                        <select id="exalun" name="ex_aluno"
+                         value={formData.ex_aluno}
+                         onChange={handleChange}>
                             <option value="">Selecione...</option>
-                            <option value="false">Não</option>
-                            <option value="true">Sim</option>
+                            <option value={0}>Não</option>
+                            <option value={1}>Sim</option>
                             
                         </select>
                     </div>
 
-                    <button type='submit'>Cadastrar</button>
+                    <button type="submit">Cadastrar</button>
+      </form>
 
-                </form>
+      {mensagem && <p>{mensagem}</p>}
             </div>
         </div>
     )
 }
+
