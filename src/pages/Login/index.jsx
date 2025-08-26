@@ -187,7 +187,18 @@ let url = 'http://localhost:5010/cadastro'
                     <button type="submit">Cadastrar</button>
       </form>
 
-      {mensagem && <p>{mensagem}</p>}
+      {mensagem && (
+  <p
+    style={{
+      marginTop: "10px",
+      fontWeight: "bold",
+      color: mensagem.includes("sucesso") ? "green" : "red"
+    }}
+  >
+    {mensagem}
+  </p>
+)}
+
             </div>
         </div>
     )
