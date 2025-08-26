@@ -30,6 +30,64 @@
   }
 }
 
+#cads{
+  text-align: center;
+}
+
+.form-group {
+ 
+  display: flex;
+ margin-bottom: 50px;
+ 
+  input {
+    
+      width: 100%;
+      padding: 12px 15px; /* Reduced from 18px 22px */
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+
+      &::placeholder {
+          color: #a0aec0;
+      }
+
+      &:focus {
+          outline: none;
+          border-color: #667eea;
+          box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+          background: rgba(255, 255, 255, 1);
+      }
+
+      &:hover {
+          border-color: #cbd5e0;
+      }
+  }
+}
+
+button {
+  background: linear-gradient(135deg, #264df6, #79a1ff);
+  color: white;
+  padding: 16px; 
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+
+  &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  }
+
+  &:active {
+      transform: translateY(0);
+  }
+}
+
 .admin__content {
   flex: 1;
   padding: 20px;
