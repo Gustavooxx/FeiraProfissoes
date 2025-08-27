@@ -1,16 +1,17 @@
-# TODO - Login Screen Styling for Conta Page
+# TODO - Estilização dos Selects na Página de Login
 
-## Steps to Complete:
-1. [x] Update Conta component with complete login form
-2. [x] Create comprehensive SCSS styling with glassmorphism design
-3. [ ] Test the implementation
+## Tarefas a serem realizadas:
+- [x] Analisar estrutura atual do formulário
+- [x] Identificar os selects que precisam de estilização
+- [x] Criar plano de estilização
+- [ ] Adicionar estilos base para selects no SCSS
+- [ ] Implementar seta personalizada
+- [ ] Adicionar estados hover e focus
+- [ ] Garantir responsividade
+- [ ] Testar a estilização
 
-## Current Status:
-- Completed steps 1 and 2
-- Ready for testing the login screen implementation
-
-## Changes Made:
-- Updated Conta component with React state management and form handling
-- Created modern glassmorphism styling with responsive design
-- Added gradient backgrounds and smooth animations
-- Implemented mobile-responsive layout
+## Selects identificados:
+1. Como soube da Feira? (sabendo_feira)
+2. Interesse (interesse)
+3. Escolaridade (escolaridade)
+4. É ex aluno (ex_aluno)
