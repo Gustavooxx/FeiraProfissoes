@@ -1,6 +1,7 @@
 import './index.scss'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 export default function Conta() {
   const [formData, setFormData] = useState({
@@ -20,53 +21,53 @@ export default function Conta() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    // Simulação de login - você pode integrar com sua API aqui
+    let url = 'http://localhost:3000/cadastro'; // Verifique se esta URL está correta
     try {
-      setMensagem('Login realizado com sucesso!')
-      console.log('Dados do login:', formData)
-      
-      // Limpar formulário após sucesso
+      const resposta = await axios.post(url, formData);
+      console.log("Resposta da API:", resposta.data);
+      // Limpa o formulário
       setFormData({
-        email: '',
-        password: ''
-      })
+        email: "",
+        password: ""
+      });
     } catch (error) {
-      console.error('Erro no login:', error)
-      setMensagem('Erro ao realizar login. Tente novamente.')
+      console.error("Erro fazer login:", error);
+      setMensagem('Erro ao realizar login. Tente novamente.');
     }
   }
 
   return (
     <div className="Conta">
       <section>
-        <div className='inputBox'>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Digite seu email"
-            required
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className='inputBox'>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Digite seu email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div className='inputBox'>
-          <label>Senha</label>
-          <input
-            type="password"
-            name="password"
-            placeholder="Digite sua senha"
-            required
-            value={formData.password}
-            onChange={handleChange}
-          />
-        </div>
+          <div className='inputBox'>
+            <label>Senha</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Digite sua senha"
+              required
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </div>
 
-        <button type="submit" onClick={handleSubmit}>Entrar</button>
-        {mensagem && <p className="mensagem">{mensagem}</p>}
-        <p>Não tem uma conta? <Link to="/Login">Cadastre-se</Link></p>
+          <button type="submit">Entrar</button>
+          {mensagem && <p className="mensagem">{mensagem}</p>}
+          <p>Não tem uma conta? <Link to="/Cadastro">Cadastre-se</Link></p>
+        </form>
       </section>
     </div>
   )
