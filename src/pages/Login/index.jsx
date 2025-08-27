@@ -31,14 +31,14 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // evita reload da página
-
-let url = 'http://localhost:5010/cadastro'
+  
+    let url = 'http://localhost:5010/cadastro';
     try {
-    const resposta = await axios.post(url,formData);
-    
-    setMensagem("Usuário cadastrado com sucesso!");
-    console.log("Resposta da API:", resposta.data);
-
+      const resposta = await axios.post(url, formData);
+      
+      setMensagem("Usuário cadastrado com sucesso!");
+      console.log("Resposta da API:", resposta.data);
+  
       // limpa o formulário
       setFormData({
         nome: "",
@@ -51,13 +51,19 @@ let url = 'http://localhost:5010/cadastro'
         ex_aluno: 0,
         cpf: ""
       });
-
+  
     } catch (error) {
       console.error("Erro ao cadastrar:", error);
-      setMensagem("Erro ao cadastrar usuário!");
+  
+      // verifica se a API retornou um erro específico
+      if (error.response && error.response.data && error.response.data.erro) {
+        setMensagem(error.response.data.erro); // ex: "CPF já existe no sistema"
+      } else {
+        setMensagem("Erro ao cadastrar usuário!");
+      }
     }
   };
-
+  
 
     return (
         <div className='cadastro'>
