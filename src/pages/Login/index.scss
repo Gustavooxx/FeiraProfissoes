@@ -19,7 +19,7 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Reduced from 50px */
+    padding: 20px;
     width: 100%;
     max-width: 550px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -27,12 +27,12 @@
     form {
         display: flex;
         flex-direction: column;
-        gap: 15px; /* Reduced from 25px */
+        gap: 15px; 
 
         h1 {
             text-align: center;
             color: #2d3748;
-            font-size: 28px; /* Reduced from 32px */
+            font-size: 28px; 
             font-weight: 600;
             margin-bottom: 10px;
             background: linear-gradient(135deg, #2243fd, #76a8ff);

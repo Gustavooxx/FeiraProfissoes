@@ -21,11 +21,10 @@ export default function Conta() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let url = 'http://localhost:3000/cadastro'; // Verifique se esta URL está correta
+    let url = 'http://localhost:3000/cadastro'; 
     try {
       const resposta = await axios.post(url, formData);
       console.log("Resposta da API:", resposta.data);
-      // Limpa o formulário
       setFormData({
         email: "",
         password: ""
