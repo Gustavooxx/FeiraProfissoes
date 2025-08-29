@@ -33,7 +33,7 @@ export default function Site() {
 
                         <div className="botoes-hero">
                             <Link to="/Login" className="botao botao-primario">Cadastre-se</Link>
-                            <Link to="/Admin" className="botao botao-secundario">Área Admin</Link>
+                            <Link to="/LoginConect" className="botao botao-secundario">Área Admin</Link>
                         </div>
 
                     </div>

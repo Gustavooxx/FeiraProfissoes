@@ -13,10 +13,9 @@ export default function Navegacao() {
             <BrowserRouter>
                <Routes>
                  <Route path="/" element={<Site />} />
-                 <Route path="/Cadastro" element={<Login/>} />
+                 <Route path="/Login" element={<Login/>} />
                  <Route path='/Admin' element={<Admin/>}/>
                  <Route path='/LoginConect' element={<LoginConnect/>}/>
-                 <Route path="/Login" element={<Conta/>} />
 
               </Routes>
             </BrowserRouter>
