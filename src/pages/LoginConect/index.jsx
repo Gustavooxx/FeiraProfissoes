@@ -1,7 +1,39 @@
+import { useState } from 'react'
 import './index.scss'
-import { Link } from 'react-router'
-export default function LoginConnect() {
+import { Link, useNavigate } from 'react-router'
+import axios from 'axios'
 
+export default function LoginConnect() {
+    const [senha,setSenha] = useState('');
+    const [mensagem,setMensagem] = useState('');
+const navigate = useNavigate();
+
+
+   async function verificar(){
+       
+       try {
+        const resposta = await axios.post('http://localhost:5010/senha', 
+           {
+               senha:senha
+           }
+        );
+   
+        setMensagem( resposta.data.mensagem);
+
+        if(resposta.data.mensagem === 'Acesso Confirmado!!'){
+            navigate('/admin')
+        }
+        
+        
+        
+    } 
+    catch (error) {
+        console.error(error);
+
+        setMensagem('Erro ao verificar senha');
+        
+    }
+   }
     return (
         <div className='login-connect'>
             <section className='container-connect'>
@@ -12,15 +44,18 @@ export default function LoginConnect() {
                         type="text"
                         name="codigo"
                         placeholder="Digite seu código de acesso"
-                        required 
+                        value={senha}
+                        onChange={(e) => setSenha(e.target.value)}
+                        
                     />
                 </div>
 
-                <Link to='/admin'>
-                <button type="submit" className='connect-button'>
+               
+                <button  className='connect-button' onClick={verificar}>
                    Conectar 
                 </button>
-                </Link>
+               
+                {mensagem && <p className='mensagem'>{mensagem}</p>}
             </section>
         </div>
     )
